@@ -1,0 +1,144 @@
+
+
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "Nike Air Zoom Tempo -  Importé Cyan",
+      "price": "35000",
+      "url": "./images/product-1.png",
+      "category": "Chaussures"
+    },
+    {
+      "id": 2,
+      "title": "Nike Basket Rouge -  Importé ",
+      "price": "64000",
+      "url": "./images/product-2.png",
+      "category": "Chaussures"
+    },
+    {
+      "id": 3,
+      "title": "Nike Lebron Lycee -  Importé Rouge",
+      "price": "78000",
+      "url": "./images/product-3.png",
+      "category": "Chaussures"
+    },
+    {
+      "id": 4,
+      "title": "Maillot Chelsea  - Blanc",
+      "price": "15000",
+      "url": "./images/product-4.png",
+      "category": "Maillots"
+    },
+    {
+      "id": 5,
+      "title": "Casquette NBA Celtics -  Importé ",
+      "price": "8000",
+      "url": "./images/product-5.png",
+      "category": "Accessories"
+    },
+    {
+      "id": 6,
+      "title": "Cullote Chelsea -  Gris",
+      "price": "12000",
+      "url": "./images/product-6.png",
+      "category": "Maillots"
+    },
+    {
+      "id": 7,
+      "title": "Maillot Real Madrid -  Noir",
+      "price": "15000",
+      "url": "./images/product-7.png",
+      "category": "Maillots"
+    },
+    {
+      "id": 8,
+      "title": "Nike Air Zoom Pegasus-  Importé Noir",
+      "price": "47000",
+      "url": "./images/product-8.png",
+      "category": "Chaussures"
+    },
+    {
+      "id": 9,
+      "title": "Maillot Bayern -  Bleu-ciel",
+      "price": "15000",
+      "url": "./images/product-9.png",
+      "category": "Maillots"
+    },
+    {
+      "id": 10,
+      "title": "Nike Strike Soccer Ball  - Taille 5",
+      "price": "17000",
+      "url": "./images/product-10.png",
+      "category": "Ballons"
+    },
+    {
+      "id": 11,
+      "title": "Adidas Tesla 18 -  Taille 5",
+      "price": "17000",
+      "url": "./images/product-11.png",
+      "category": "Ballons"
+    },
+    {
+      "id": 12,
+      "title": "Nike Skills soccer -  Taille 5",
+      "price": "13000",
+      "url": "./images/product-12.png",
+      "category": "Ballons"
+    },
+    {
+      "id": 13,
+      "title": "NBA Spalding Gris-  Importé",
+      "price": "77000",
+      "url": "./images/product-13.png",
+      "category": "Ballons"
+    },
+    {
+      "id": 14,
+      "title": "NBA Spalding Outdor/Indoor - Taille 5",
+      "price": "80000",
+      "url": "./images/product-14.png",
+      "category": "Ballons"
+    },
+    {
+      "id": 15,
+      "title": "Casque Chicago Bulls - Beats By Dre",
+      "price": "32000",
+      "url": "./images/product-15.png",
+      "category": "Accessories"
+    },
+    {
+      "id": 16,
+      "title": "Chausettes NBA - Importé",
+      "price": "6000",
+      "url": "./images/product-16.png",
+      "category": "Accessories"
+    },
+
+
+    
+
+    {
+      "id": 21,
+      "title": "Nike Air Zoom Tempo -  Importé Cyan",
+      "price": "35000",
+      "url": "./images/product-1.png",
+      "category": "Dresses"
+    },
+    {
+      "id": 22,
+      "title": "Nike Basket Rouge -  Importé ",
+      "price": "64000",
+      "url": "./images/product-2.png",
+      "category": "Dresses"
+    },
+    {
+      "id": 23,
+      "title": "Nike Lebron Lycee -  Importé Rouge",
+      "price": "78000",
+      "url": "./images/product-3.png",
+      "category": "Dresses"
+    }
+
+  ]
+}

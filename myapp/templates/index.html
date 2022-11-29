@@ -1,0 +1,286 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- ====== Favicon ====== -->
+    <link
+      rel="shortcut icon"
+      href="images/favicon-32x32.png"
+      type="image/png"
+    />
+    <!-- ====== Boxicons ====== -->
+    <link
+      href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!-- ====== Swiper CSS ====== -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <!-- ====== Custom CSS ====== -->
+    <!-- <link rel="stylesheet" href="css/styles.css" /> -->
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <title>GoSport</title>
+  </head>
+  <body>
+    <!-- ====== Header ====== -->
+    <header class="header">
+        <!-- ====== Navigation ====== -->
+        <nav class="navbar">
+          <div class="row container d-flex">
+            <div class="logo">
+              <img style="width: 10%; position: absolute;top: 3vh;left: 18vw;" src=" {% static '/images/logo0.png' %}" alt="" />
+            </div>
+  
+            <div class="nav-list d-flex">
+              <a href="">Accueil</a>
+              <a href="">Produits</a>
+              <a href="">Dernières Sorties</a>
+              <a href="">A propos</a>
+              <!-- <a href="">Lookups</a> -->
+              <div class="close">
+                <i class="bx bx-x"></i>
+              </div>
+              <a class="user-link">Connexion</a>
+            </div>
+  
+            <div class="icons d-flex">
+              <div class="icon d-flex"><i class="bx bx-search"></i></div>
+              <div class="icon user-icon d-flex">
+                <i class="bx bx-user"></i>
+              </div>
+              <div class="icon d-flex">
+                <i class="bx bx-cart"></i>
+                <span></span>
+              </div>
+            </div>
+  
+            <!-- Hamburger -->
+            <div class="hamburger">
+              <i class="bx bx-menu-alt-right"></i>
+            </div>
+          </div>
+        </nav>
+  
+        <!-- ====== Hero Area ====== -->
+        <div class="hero">
+          <div class="row container d-flex">
+            <div class="col">
+              <b><span class="subtitle">Il y a TouT pour le</span> </b>
+              <h1>Sport</h1>
+              <br>
+              <b><p>Prenez pour vous en même temps!!</p></b>
+              <button class="btn">Explorer</button>
+            </div>
+            <img style="width:50%;position:relative; left: 148px;" src="{% static '/images/guys.png' %}" alt="" />
+          </div>
+        </div>
+      </header>
+
+
+
+    <!-- ====== Collection ====== -->
+
+    <section class="section collection">
+        <div class="title">
+          <span>CATEGORIES</span>
+          <h2>Notre collection</h2>
+        </div>
+        <div class="filters d-flex">
+
+          
+          <div data-filter="Chaussures">Chaussures</div>
+          <div data-filter="Maillots">Maillots</div>
+          <div data-filter="Ballons">Ballons</div>
+          <div data-filter="Accessories">Accessoires</div>
+        </div>
+  
+        <div class="products container">
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper" id="products">
+              <div class="swiper-slide">
+
+                <!-- <div class="product">
+                  <div class="top d-flex">
+                    <img src="./images/product-1.png" alt="" />
+                    <div class="icon d-flex">
+                      <i class="bx bxs-heart"></i>
+                    </div>
+                  </div>
+                  <div class="bottom">
+                    <h4>Nike Air Men’s Hoodie - Imported Hoodie Red</h4>
+                    <div class="d-flex">
+                      <div class="price">$150</div>
+                      <div class="rating">
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bxs-star"></i>
+                      </div>
+                    </div> 
+                  </div>
+                </div> -->
+
+                
+              </div>
+            </div>
+          </div>
+          <div class="pagination">
+            <div class="custom-pagination"></div>
+          </div>
+        </div>
+      </section>
+  
+
+
+    <!-- ====== New Arrival ====== -->
+<!-- 
+    <section class="section new-arrival">
+        <div class="title">
+          <span>NEW ARRIVAL</span>
+          <h2>Latest Collection</h2>
+        </div>
+  
+        <div class="row container">
+          <div class="col col-1">
+            <img src="./images/poster-1.png" alt="" />
+            <h3>
+              2021 Trends <br />
+              Women’s Smart Skirt
+            </h3>
+          </div>
+          <div class="col col-2">
+            <img src="./images/poster-2.png" alt="" />
+            <h3>
+              2021 Trends <br />
+              Women’s Smart Skirt
+            </h3>
+          </div>
+          <div class="col col-3">
+            <img src="./images/poster-3.png" alt="" />
+            <h3>
+              2021 Trends <br />
+              Women’s Smart Shirt <br />
+              <span>Discover More:</span>
+            </h3>
+          </div>
+        </div>
+      </section> -->
+  
+    <!-- ====== Categories ====== -->
+
+    <section class="section categories">
+        <div class="title">
+          <span>COLLECTION</span>
+          <h2>Dernières collection 2022</h2>
+        </div>
+  
+        <div class="products container">
+          <!-- <div class="product">
+            <div class="top d-flex">
+              <img src="./images/product-1.png" alt="" />
+              <div class="icon d-flex">
+                <i class="bx bxs-heart"></i>
+              </div>
+            </div>
+            <div class="bottom">
+              <div class="d-flex">
+                <h4>Nike Air Men’s Hoodie - Imported Hoodie Red</h4>
+                <a href="" class="btn cart-btn">Add to Cart</a>
+              </div>
+              <div class="d-flex">
+                <div class="price">$150</div>
+                <div class="rating">
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                </div>
+              </div>
+            </div>
+          </div> -->
+        </div>
+  
+        <div class="button d-flex">
+          <a class="btn loadmore">Charger Plus</a>
+        </div>
+      </section>
+  
+
+    <!-- ====== Statistics ====== -->
+
+    <!-- ====== Blogs ====== -->
+
+    <!-- ====== Footer ====== -->
+
+    <footer class="footer">
+      <div class="row container">
+        <div class="col">
+          <div class="logo d-flex">
+            <img style="width: 55%;" src="{% static '/images/logo0.png' %}" alt="logo" />
+          </div>
+          <p>
+            Vous trouverez tout le nécessaire <br />
+            pour le sport ici.
+          </p>
+          <div class="icons d-flex">
+            <div class="icon d-flex">
+              <i class="bx bxl-facebook"></i>
+            </div>
+            <!-- <div class="icon d-flex"><i class="bx bxl-twitter"></i></div> -->
+            <div class="icon d-flex"><i class="bx bxl-instagram"></i></div>
+            <!-- <div class="icon d-flex"><i class="bx bxl-youtube"></i></div> -->
+          </div>
+          <p class="color">
+            Copyrights 2022 <br />
+            @GoSport
+          </p>
+        </div>
+        <div class="col">
+          <div>
+            <h4>Collection</h4>
+            <a href="">Chaussures</a>
+            <a href="">Maillots</a>
+            <a href="">Ballons</a>
+            <a href="">Accessoires</a>
+          </div>
+         
+          <div>
+            <h4>Contactez nous</h4>
+            <div class="d-flex">
+              <div class="icon"><i class="bx bxs-map"></i></div>
+              <span>Abidjan, Treichville, CI</span>
+            </div>
+            <div class="d-flex">
+              <div class="icon"><i class="bx bxs-envelope"></i></div>
+              <span>info@gosport.com</span>
+            </div>
+            <div class="d-flex">
+              <div class="icon"><i class="bx bxs-phone"></i></div>
+              <span>+225 0767567930</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+
+    <!-- ====== Login and Signup Form ====== -->
+
+    <!-- ====== SwiperJs ====== -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- ====== Custom Script ====== -->
+    <script src="{% static '/js/product.js' %}"></script>
+    <script src="{% static '/js/main.js' %}"></script>
+  </body>
+</html>
+
