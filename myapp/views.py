@@ -1,7 +1,16 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
-def test(request):
+def index(request):
     return render(request,'index.html')
+
+def login(request):
+    return render(request,'login.html')
+
+def register(request):
+    return render(request,'register.html')
+
+def bucket(request):
+    return render(request,'bucket.html')
 
 # Create your views here.

@@ -51,12 +51,27 @@
           </div>
 
           <div class="icons d-flex">
-            <div class="icon d-flex"><i class="bx bx-search"></i></div>
+            <!-- <div class="icon d-flex"><i class="bx bx-search"></i></div> -->
             <div class="icon user-icon d-flex">
-              <i class="bx bx-user"></i>
+              <i id="user_acc_icon" class="bx bx-user"></i>
+              <div id="user_acc">
+
+                  <button> <a href="{% url 'register' %}"> Se connecter</a></button>
+
+              </div>
+              <form action="">
+              <div id="user_info">
+                <i>GoSport</i>
+                <b>MonCompte</b>
+                <input type="text" value="email@exemple.com" placeholder="email">
+                <input type="password" value="mot_de_pass" placeholder="votre mot de pass">
+                <!-- <button>Déconnexion</button> -->
+                <button>Déconnexion</button>
+              </div>
+            </form>
             </div>
             <div class="icon user-icon d-flex" >
-              <i class="bx bx-cart" id="cart_icon"></i>
+              <a href="{% url 'bucket' %}"><i class="bx bx-cart" id="cart_icon"></i> </a>
               <p id="cart_counter_circle" > <b id="cart_counter" >1</b> </p>
             </div>
               <div id="bucket_preview">
@@ -92,7 +107,7 @@
               <h1>Sport</h1>
               <br>
               <b><p>Prenez pour vous en même temps!!</p></b>
-              <button class="btn">Explorer</button>
+              <button class="btn"> <a href="{% url 'index' %}#prod_cat"> Explorer</a></button>
             </div>
             <img style="width:50%;position:relative; left: 148px;" src="{% static '/images/guys.png' %}" alt="" />
           </div>
@@ -105,7 +120,7 @@
 
     <section class="section collection">
         <div class="title">
-          <span>CATEGORIES</span>
+          <span id="prod_cat" >CATEGORIES</span>
           <h2>Notre collection</h2>
         </div>
         <div class="filters d-flex">
@@ -194,7 +209,7 @@
 
     <section class="section categories">
         <div class="title">
-          <span>COLLECTION</span>
+          <span id="prod_latest" >COLLECTION</span>
           <h2>Dernières collection 2022</h2>
         </div>
   
@@ -269,7 +284,7 @@
             <a href="">Accessoires</a>
           </div>
          
-          <div>
+          <div  id="contact_sec" >
             <h4>Contactez nous</h4>
             <div class="d-flex">
               <div class="icon"><i class="bx bxs-map"></i></div>

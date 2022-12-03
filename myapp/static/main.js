@@ -31,3 +31,64 @@ $("#bucket_preview").mouseout(function(){
 
 });
 
+
+// effet hover sur l'icone user pour afficher le boutton de connexion lorsque l'utilisateur n'est pas connnecté
+
+$("#user_acc_icon").mouseout(function(){
+
+  $("#user_acc").hide();
+
+});
+
+$("#user_acc_icon").mouseover(function(){
+
+  $("#user_acc").show();
+  $("#user_acc").css('display', 'flex');
+  $("#user_acc").css('justify-content', 'center');
+
+});
+
+$("#user_acc").mouseover(function(){
+
+  $("#user_acc").show();
+  $("#user_acc").css('display', 'flex');
+  $("#user_acc").css('justify-content', 'center');
+
+});
+$("#user_acc").mouseout(function(){
+
+  $("#user_acc").hide();
+
+
+});
+
+// effet hover sur l'icone user pour afficher le compte lorsque l'utilisateur est connnecté
+
+
+// $("#user_acc_icon").mouseout(function(){
+
+//     $("#user_info").hide();
+  
+//   });
+  
+//   $("#user_acc_icon").mouseover(function(){
+  
+//     $("#user_info").show();
+//     $("#user_info").css('display', 'flex');
+//     $("#user_info").css('justify-content', 'center');
+  
+//   });
+  
+//   $("#user_info").mouseover(function(){
+  
+//     $("#user_info").show();
+//     $("#user_info").css('display', 'flex');
+//     $("#user_info").css('justify-content', 'center');
+  
+//   });
+//   $("#user_info").mouseout(function(){
+  
+//     $("#user_info").hide();
+  
+  
+//   });
