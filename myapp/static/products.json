@@ -6,21 +6,21 @@
       "id": 1,
       "title": "Nike Air Zoom Tempo -  Importé Cyan",
       "price": "35000",
-      "url": "./images/product-1.png",
+      "url": "product-1.png",
       "category": "Chaussures"
     },
     {
       "id": 2,
       "title": "Nike Basket Rouge -  Importé ",
       "price": "64000",
-      "url": "./images/product-2.png",
+      "url": "product-2.png",
       "category": "Chaussures"
     },
     {
       "id": 3,
       "title": "Nike Lebron Lycee -  Importé Rouge",
       "price": "78000",
-      "url": "./images/product-3.png",
+      "url": ".product-3.png",
       "category": "Chaussures"
     },
     {

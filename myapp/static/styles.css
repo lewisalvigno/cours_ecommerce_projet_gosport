@@ -208,7 +208,7 @@ img {
 }
 .header .hero .row {
   height: 100%;
-  background: url("../images/bg.svg") center/cover no-repeat fixed;
+  background: url( "/static/bg.svg") center/cover no-repeat fixed;
   border-radius: 2rem;
   position: relative;
 }
@@ -711,4 +711,5 @@ img {
 }
 /* ========== User Form =========== */
 
-/*# sourceMappingURL=styles.css.map */
+/* ====== css du bucket_preview */
+

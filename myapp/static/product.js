@@ -18,9 +18,10 @@ const swiper = new Swiper(".mySwiper", {
 
   const getProducts = async () => {
     try {
-      const results = await fetch("./data/products.json");
+      const results = await fetch("static/test_products.json");
       const data = await results.json();
       const products = data.products;
+      console.log(products)
       return products;
     } catch (err) {
       console.log(err);
@@ -50,7 +51,7 @@ const swiper = new Swiper(".mySwiper", {
                   <div class="bottom">
                     <h4>${product.title}</h4>
                     <div class="d-flex">
-                      <div class="price">$${product.price}</div>
+                      <div class="price">${product.price} FCFA</div>
                       <div class="rating">
                         <i class="bx bxs-star"></i>
                         <i class="bx bxs-star"></i>
