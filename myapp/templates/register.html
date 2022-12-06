@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'styles.css' %}">
-    <link rel="stylesheet" href="{% static 'styles2.css' %}">
+    <link rel="stylesheet" href="{% static 'styles4.css' %}">
     <title>GoSport</title>
 </head>
 <body>
@@ -22,12 +22,15 @@
                     <a href=" {% url 'login' %}">Se connecter</a>
             </div>
 
-            <form action="">
+            <form method="post" action="{% url 'register0' %}">
+                {% csrf_token %}  
+                {{ register_form}}
             <div id="login_fields" >
-               <input type="email" placeholder="email">
-               <input type="text" placeholder="Mot de pass">
-               <input type="text" placeholder="Confirmer mot de pass">
-               <button>S'enregistrer</button>
+               <input type="text" name="username" placeholder="username">
+               <input type="email" name="email" placeholder="email">
+               <input type="password" name="password" placeholder="Mot de pass">
+               <input type="password" placeholder="Confirmer mot de pass">
+               <button type="submit" >S'enregistrer</button>
                <div id="other_logins" >
                     <div>
 

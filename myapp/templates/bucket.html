@@ -25,7 +25,8 @@
     <!-- ====== Custom CSS ====== -->
     <!-- <link rel="stylesheet" href="css/styles.css" /> -->
     <link rel="stylesheet" href="{% static 'styles.css' %}">
-    <link rel="stylesheet" href="{% static 'styles2.css' %}">
+    <!-- <link rel="stylesheet" href="{% static 'styles2.css' %}"> -->
+    <link rel="stylesheet" href="{% static 'styles3.css' %}">
     <title>GoSport</title>
   </head>
   <body>
@@ -39,7 +40,7 @@
           </div>
 
           <div class="nav-list d-flex">
-            <a href="">Accueil</a>
+            <a href="{% url 'index' %}">Accueil</a>
             <a href="{% url 'index' %}#prod_cat">Produits</a>
             <!-- <a href="{% url 'index' %}#prod_latest">Dernières Sorties</a>
             <a href="{% url 'index' %}#contact_sec">A propos</a> -->
@@ -50,7 +51,7 @@
             <a class="user-link">Connexion</a>
           </div>
 
-          <div class="icons d-flex">
+          <div style="position: relative; right: 2.5vw;" class="icons d-flex">
             <!-- <div class="icon d-flex"><i class="bx bx-search"></i></div> -->
             <div class="icon user-icon d-flex">
               <i id="user_acc_icon" class="bx bx-user"></i>
@@ -103,58 +104,116 @@
 
 
 
-<section id="cart_sec" >
+        <section id="cart_sec" >
 
-    <div class="cart_items">
-        <div>
-            <span>Panier</span>
-            <span>1 produit</span>
-        </div>
-        <div id="cart_prod_list">
-            <div>
-                <span>Description</span>
-                <span>Quantité</span>
-                <span>Prix unitaire</span>
-                <span>Prix total</span>
+          <div class="cart_items">
+              <div>
+                  <span>Panier</span>
+                  <span> <b id="cart_bucket_counter"></b> &nbsp;produit</span>
+              </div>
+              <div id="cart_prod_list">
+                  <div>
+                      <span>Description</span>
+                      <span>Quantité</span>
+                      <span>Prix unitaire</span>
+                      <span>Prix total</span>
+                  </div>
+      
+                  <div style="overflow-y: scroll;" id="cart_bucket_prod" > 
+      
+                      <!-- <div class="cart_prod">
+                        <div class="prod_details">
+                          <img src="./images/product-6.png" alt=""> &nbsp;&nbsp;
+                          <span>Cullote Chelsea</span>
+                        </div>
+                        <div class="prod_qty">
+                          <i class="bx bx-plus"></i>
+                          <div><b>1</b></div>
+                          <i class="bx bx-minus"></i>
+                        </div>
+                        <div class="prod_unit_price"> <b>24000</b> &nbsp; FCFA</div>
+                        <div class="prod_tot_price"> <b>24000</b> &nbsp;FCFA </div>
+                      </div> -->
+      
+                      <!-- <div class="cart_prod">
+                        <div class="prod_details">
+                          <img src="./images/product-2.png" alt=""> &nbsp;&nbsp;
+                          <span>Nike Kyrie Rouge</span>
+                        </div>
+                        <div class="prod_qty">
+                          <i class="bx bx-plus"></i>
+                          <div><b>1</b></div>
+                          <i class="bx bx-minus"></i>
+                        </div>
+                        <div class="prod_unit_price"> <b>24000</b> &nbsp; FCFA</div>
+                        <div class="prod_tot_price"> <b>24000</b> &nbsp;FCFA </div>
+                      </div>
+      
+                      <div class="cart_prod">
+                        <div class="prod_details">
+                          <img src="./images/product-5.png" alt=""> &nbsp;&nbsp;
+                          <span>Casquette Celtics</span>
+                        </div>
+                        <div class="prod_qty">
+                          <i class="bx bx-plus"></i>
+                          <div><b>1</b></div>
+                          <i class="bx bx-minus"></i>
+                        </div>
+                        <div class="prod_unit_price"> <b>24000</b> &nbsp; FCFA</div>
+                        <div class="prod_tot_price"> <b>24000</b> &nbsp;FCFA </div>
+                      </div> -->
+      
+                  </div>
+      
+              </div>
+              <span><a id="cart_empty_bucket" href="{% url 'index' %}"> <i class='bx bx-left-arrow-alt'></i> Annuler</a></span>
+          </div>
+      
+          <div class="cart_order">
+      
+            <div id="user_login">
+      
+              <span>Connexion</span>
+              <input type="text" placeholder="Email">
+              <input type="text" placeholder="Mot de pass">
+              <button>Se connecter</button>
+              <div id="user_login_alt" >
+                  <button> <a href="{% url 'register' %}">S'enregistrer</a> </button>
+              </div>
+      
             </div>
-
-        </div>
-        <span><a href="index.html">Retour</a></span>
-    </div>
-
-    <div class="cart_order">
-        <span>Commande</span>
-        <div id="cart_paiement">
-            <span>Methode de Paiement</span>
-
-            <select name="pm" id="pm">
-                <option value="">Mobile Money</option>
-                <option value="Orange money">Orange money</option>
-                <option value="Wave">Wave</option>
-                <option value="Moov money">Moov money</option>
-                <option value="Mtn money">Mtn money</option>
-              </select>
-        </div>
-        <div id="cart_shipping">
-            <span>Livraison</span>
-            <input type="text" placeholder="Adresse de livraison">
-        </div>
-        <div id="cart_promo_code">
-            <span>Code Promo</span>
-            <input type="text" placeholder="Code pomo">
-            <button>Valider</button>
-        </div>
-        <hr>
-        <div id="cart_total">
-            <div>
-                <span>TOTAL:</span>
-                <span>24000FCFA</span>
-            </div>
-            <button>Paiement</button>
-        </div>
-    </div>
-
-</section>
+              <!-- <span>Commande</span> -->
+              <div id="cart_paiement">
+                  <span>Methode de Paiement</span>
+      
+                  <select name="pm" id="pm">
+                      <option value="">Mobile Money</option>
+                      <option value="Orange money">Orange money</option>
+                      <option value="Wave">Wave</option>
+                      <option value="Moov money">Moov money</option>
+                      <option value="Mtn money">Mtn money</option>
+                    </select>
+              </div>
+              <div id="cart_shipping">
+                  <span>Livraison</span>
+                  <input type="text" placeholder="Adresse de livraison">
+              </div>
+              <div id="cart_promo_code">
+                  <span>Code Promo</span>
+                  <input type="text" placeholder="Code pomo">
+                  <button>Valider</button>
+              </div>
+              <hr>
+              <div id="cart_total">
+                  <div>
+                      <span>TOTAL:</span>
+                      <span> <b id="bucket_total_count"></b>&nbsp;FCFA</span>
+                  </div>
+                  <button>Paiement</button>
+              </div>
+          </div>
+      
+      </section>
 
 
 
@@ -172,8 +231,8 @@
 
     <!-- ====== Custom Script ====== -->
     <script src="{% static 'jquery.js' %}"></script>
-    <script src="{% static 'product.js' %}"></script>
-    <script src="{% static 'main.js' %}"></script>
+    <script src="{% static 'products2.js' %}"></script>
+    <script src="{% static 'main2.js' %}"></script>
   </body>
 </html>
 

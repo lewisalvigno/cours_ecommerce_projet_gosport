@@ -24,8 +24,9 @@
     />
     <!-- ====== Custom CSS ====== -->
     <!-- <link rel="stylesheet" href="css/styles.css" /> -->
-    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <link rel="stylesheet" href="{% static 'styles1.css' %}">
     <link rel="stylesheet" href="{% static 'styles2.css' %}">
+    <link rel="stylesheet" href="{% static 'toastr.css' %}">
     <title>GoSport</title>
   </head>
   <body>
@@ -50,15 +51,18 @@
             <a class="user-link">Connexion</a>
           </div>
 
-          <div class="icons d-flex">
+          <div style="position: relative; right: 2vw;" id="user_cart_div" class="icons d-flex">
             <!-- <div class="icon d-flex"><i class="bx bx-search"></i></div> -->
             <div class="icon user-icon d-flex">
               <i id="user_acc_icon" class="bx bx-user"></i>
+              {% if not user.is_authenticated %}
               <div id="user_acc">
 
-                  <button> <a href="{% url 'register' %}"> Se connecter</a></button>
+                  <button> <a href="{% url 'login' %}"> Se connecter</a></button>
 
               </div>
+
+              {% else %}
               <form action="">
               <div id="user_info">
                 <i>GoSport</i>
@@ -69,6 +73,7 @@
                 <button>Déconnexion</button>
               </div>
             </form>
+            {% endif %}
             </div>
             <div class="icon user-icon d-flex" >
               <a href="{% url 'bucket' %}"><i class="bx bx-cart" id="cart_icon"></i> </a>
@@ -97,7 +102,7 @@
               <i class="bx bx-menu-alt-right"></i>
             </div>
           </div>
-        </nav>
+        </nav> 
   
         <!-- ====== Hero Area ====== -->
         <div class="hero">
@@ -171,39 +176,32 @@
   
 
 
-    <!-- ====== New Arrival ====== -->
-<!-- 
+    <!-- ====== Promotion ====== -->
+
     <section class="section new-arrival">
-        <div class="title">
-          <span>NEW ARRIVAL</span>
-          <h2>Latest Collection</h2>
+      <div class="title">
+        <span>PROMOTION</span>
+        <h2>Réduction sur tous vos articles</h2>
+      </div>
+
+      <div class="row container">
+        <div class="col col-1">
+          <img src="{% static 'poster-1.png'%}" alt="" />
+          <!-- <h3>
+            Tendance 2022 <br />
+            Maillots de foot
+          </h3> -->
         </div>
-  
-        <div class="row container">
-          <div class="col col-1">
-            <img src="./images/poster-1.png" alt="" />
-            <h3>
-              2021 Trends <br />
-              Women’s Smart Skirt
-            </h3>
-          </div>
-          <div class="col col-2">
-            <img src="./images/poster-2.png" alt="" />
-            <h3>
-              2021 Trends <br />
-              Women’s Smart Skirt
-            </h3>
-          </div>
-          <div class="col col-3">
-            <img src="./images/poster-3.png" alt="" />
-            <h3>
-              2021 Trends <br />
-              Women’s Smart Shirt <br />
-              <span>Discover More:</span>
-            </h3>
-          </div>
+        <div class="col col-2">
+          <img src="{% static 'poster-2.png' %}" alt="" />
+         
         </div>
-      </section> -->
+        <div class="col col-3">
+          <img src="{% static 'poster-3.png' %}" alt="" />
+         
+        </div>
+      </div>
+    </section>
   
     <!-- ====== Categories ====== -->
 
@@ -213,7 +211,7 @@
           <h2>Dernières collection 2022</h2>
         </div>
   
-        <div class="products container">
+        <div class="products container prod_container">
           <!-- <div class="product">
             <div class="top d-flex">
               <img src="./images/product-1.png" alt="" />
@@ -312,8 +310,9 @@
 
     <!-- ====== Custom Script ====== -->
     <script src="{% static 'jquery.js' %}"></script>
-    <script src="{% static 'product.js' %}"></script>
-    <script src="{% static 'main.js' %}"></script>
+    <script src="{% static 'toastr.js' %}"></script>
+    <script src="{% static 'products2.js' %}"></script>
+    <script src="{% static 'main2.js' %}"></script>
   </body>
 </html>
 
